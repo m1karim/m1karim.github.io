@@ -9,8 +9,8 @@ echo %COMPUTERNAME%
 
 echo.
 echo Push and Pull to Github
-echo 1: Push to Master
-echo 0: Pull from Master
+echo 1: Push to Main
+echo 0: Pull from Main
 echo.
 
 SET /P input="Enter your choice: "
@@ -19,11 +19,11 @@ IF "%input%"=="1" (
   echo Pushing updates to GitHub...
   git add .
   git commit -m "Updated on %date%"
-  git push origin master
+  git push origin main
   cd ..
 ) ELSE IF "%input%"=="0" (
   echo Pulling latest updates from GitHub...
-  git pull origin master
+  git pull origin main
   cd ..
 ) ELSE (
   echo You Pressed Wrong Keyword. GoodBye!!!!!
